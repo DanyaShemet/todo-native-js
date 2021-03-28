@@ -1,0 +1,149 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.task:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.task:hover {
+    background: #ddd;
+}
+
+.task {
+    padding: 20px 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: #eee;
+    font-size: 18px;
+    transition: .2s;
+    -webkit-user-select: none;
+    user-select: none;
+    min-height: 90px;
+    cursor: pointer;
+}
+
+
+.task p {
+    margin-bottom: 10px;
+}
+
+.task.checked {
+    background: #888;
+    color: #fff;
+    /*text-decoration: line-through;*/
+    justify-content: space-evenly;
+}
+
+.task.complete {
+    background-color: rgba(0, 255, 153, 0.5);
+}
+
+.task.outcome {
+    background-color: rgba(252, 111, 111, 0.5);
+}
+
+.task.complete .after-check {
+    display: none;
+}
+
+.task.checked p,
+.task.checked div,
+.task.checked span {
+    display: none;
+}
+
+.task.checked .after-check {
+    display: block;
+}
+
+.after-check {
+    display: none;
+}
+
+
+.close {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.header {
+    background-color: #f44336;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+label{
+    width: 100%;
+}
+input {
+    margin: 10px 0;
+    border: none;
+
+    width: 100%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+.addBtn {
+    padding: 9px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.addBtn:hover {
+    background-color: #bbb;
+}
+
+.sort-wrap{
+    display: flex;
+    justify-content: center;
+}
+.sort-wrap button:not(:last-child){
+    margin-right: 20px;
+}
+
+
+
+
+
+.selected {
+    opacity: 0.6;
+}
