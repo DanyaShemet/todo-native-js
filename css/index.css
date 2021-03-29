@@ -34,7 +34,22 @@ ul {
     min-height: 90px;
     cursor: pointer;
 }
+.filter-wrap button.active, .sort-wrap button.active{
+    color: red;
+}
+.filter-btn-wrap, .sort-btn-wrap{
+    display: none;
+}
+.filter-btn-wrap.active, .sort-btn-wrap.active{
+    display: block;
+}
 
+.task.hidden{
+    display: none ;
+}
+.task.nh{
+    display: flex !important;
+}
 
 .task p {
     margin-bottom: 10px;
