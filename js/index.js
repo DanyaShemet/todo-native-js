@@ -54,6 +54,8 @@ function render() {
                 </li>`)
     }
 
+
+
     state.filter.includes('complete') ? document.querySelector('#sort-complete').classList.add('active') : document.querySelector('#sort-complete').classList.remove('active')
     state.filter.includes('outcome') ? document.querySelector('#sort-outcome').classList.add('active') : document.querySelector('#sort-outcome').classList.remove('active')
     state.filter.includes('process') ? document.querySelector('#sort-process').classList.add('active') : document.querySelector('#sort-process').classList.remove('active')
@@ -156,7 +158,7 @@ function filterComplete(el, key) {
 function resetFilter(){
 
     state.filter = []
-    localStorage.removeItem('filter')
+    localStorage.setItem('filter', JSON.stringify(state.filter))
     state.tasks.map(t => t.hidden = false)
     localStorage.setItem('tasks', JSON.stringify(state.tasks))
     render()
