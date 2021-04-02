@@ -15,7 +15,7 @@ let state = {
 
 
 function render() {
-    let inputValue = document.getElementById('myInput').value = '';
+    document.getElementById('myInput').value = '';
     while (myNodeList.firstChild) {
         myNodeList.removeChild(myNodeList.firstChild);
     }
@@ -162,9 +162,13 @@ function resetFilter(){
     state.tasks.map(t => t.hidden = false)
     localStorage.setItem('tasks', JSON.stringify(state.tasks))
     render()
-
 }
-
+function resetSort(){
+    state.sorted = ''
+    localStorage.setItem('sorted', JSON.stringify(state.sorted))
+    localStorage.setItem('tasks', JSON.stringify(state.tasks))
+    render()
+}
 
 
 
@@ -240,6 +244,9 @@ sortElements.addEventListener('click', (e) => {
     } else if (e.target.id === "sort-status") {
         sortStatus()
     }
+    else if (e.target.id === "reset-sort") {
+        resetSort()
+    }
 })
 
 filterElements.addEventListener('click', (e) => {
@@ -269,6 +276,7 @@ function sortName() {
         }
         return 0
     });
+
     state.sorted = 'sortName'
     localStorage.setItem('tasks', JSON.stringify(state.tasks));
     localStorage.setItem('sorted', JSON.stringify(state.sorted));
