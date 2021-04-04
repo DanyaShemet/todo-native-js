@@ -397,13 +397,28 @@ input::placeholder {
     .action-btn span:not(:last-child) {
         margin-right: 5px;
     }
+    .sort-wrap.active, .filter-wrap.active{
+        margin-bottom: 20px;
+    }
+    .sq-btn.chosen{
+        margin-bottom: 10px;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
     .content {
         width: 80%;
     }
-
+    .filter-btn-wrap.active{
+        left: 0;
+    }
+    .sort-btn-wrap.active{
+        right: 0;
+    }
+    .filter-btn-wrap button:not(:last-child), .sort-btn-wrap button:not(:last-child){
+        margin-right: 5px;
+    }
     .task.redaction .content {
         width: 70%;
     }
