@@ -1,6 +1,6 @@
 # Todo на чистом JS
 ## https://danyashemet.github.io/todo-native-js/
-### Ссылка на [behance] 
+### Ссылка на [behance] https://www.behance.net/gallery/116822487/reaktivnyj-Todo-list-na-chistom-JS
 
 ## Идея
 ```
